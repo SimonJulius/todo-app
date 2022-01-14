@@ -7,7 +7,7 @@ Vue 3 Todo app
 Clone the project
 cd into vue-todo
 run yarn
-run yarn serve to start the todo project
+run yarn dev to start the todo project
 
 The current state of the app is not working as it should, find what is wrong with it and make it work.
 
