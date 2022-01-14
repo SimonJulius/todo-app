@@ -12,25 +12,25 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useStore } from "vuex";
-const props = defineProps({
-    task: { type: Object, required: true },
-  })
-    const store = useStore();
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+const props = {
+  task: { type: Object, required: true },
+};
+const store = useStore();
 
-    const checkboxModel = computed({
-      get() {
-        return props.task.completed;
-      },
-      set(value) {
-        store.commit("todos/toggleStatus", props.task.id);
-      },
-    });
+const checkboxModel = computed({
+  get() {
+    return props.task.completed;
+  },
+  set(value) {
+    store.commit('todos/toggleStatus', props.task.id);
+  },
+});
 
-    function onDelete() {
-      store.commit("todos/delete", props.task.id);
-    }
+function onDelete() {
+  store.commit('todos/delete', props.task.id);
+}
 </script>
 
 <style lang="scss" scoped>

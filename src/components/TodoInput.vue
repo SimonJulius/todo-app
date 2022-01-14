@@ -12,28 +12,18 @@
   </div>
 </template>
 
-<script>
-import { ref } from "vue";
-import { useStore } from "vuex";
+<script setup>
+import { useStore } from 'vuex';
 
-export default {
-  setup() {
-    const store = useStore();
-    const inputModel = ref("");
+const store = useStore();
+const inputModel = '';
 
-    function onAdd(e) {
-      console.log("add");
-      store.commit("todos/create", inputModel.value);
-      inputModel.value = "";
-      e.target.blur();
-    }
-
-    return {
-      inputModel,
-      onAdd,
-    };
-  },
-};
+function onAdd(e) {
+  console.log('add');
+  store.commit('todos/create', inputModel.value);
+  inputModel.value = '';
+  e.target.blur();
+}
 </script>
 
 <style lang="scss" scoped>

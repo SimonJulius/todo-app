@@ -4,35 +4,29 @@ import { v4 as uuidv4 } from "uuid";
 const state = () => ({
   all: [],
 });
-
 const getters = {
   active(state) {
-    return state.all.filter((task) => task.completed === false)
+    
   },
   completed(state) {
-    return state.all.filter((task) => task.completed === true)
+    
   }
 };
 
 const actions = {};
 
 const mutations = {
-  create(state, name) {
-    state.all.push({
-      id: uuidv4(),
-      name,
-      completed: false,
-    });
+  create() {
+    
   },
-  toggleStatus(state, taskId) {
-    const selectedTask = state.all.find((task => task.id === taskId));
-    selectedTask.completed = !selectedTask.completed;
+  toggleStatus() {
+    
   },
-  delete(state, taskId) {
-    state.all = state.all.filter((task) => task.id !== taskId);
+  delete() {
+   
   },
-  clearCompleted(state) {
-    state.all = state.all.filter((task) => task.completed === false)
+  clearCompleted() {
+    
   }
 };
 

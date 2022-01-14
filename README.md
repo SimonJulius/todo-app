@@ -2,26 +2,15 @@
 
 Vue 3 Todo app
 
-## Install the dependencies
-```bash
-yarn
-```
+## CARBON TODO APP
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+Clone the project
+cd into vue-todo
+run yarn
+run yarn serve to start the todo project
 
-### Lint the files
-```bash
-yarn run lint
-```
+The current state of the app is not working as it should, find what is wrong with it and make it work.
 
-### Build the app for production
-```bash
-quasar build
-```
+A short gif of the working todo list is as shown in the images file in asset folder.
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
-# todo-app
+You can use documentation and google.
